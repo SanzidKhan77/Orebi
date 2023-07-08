@@ -1,0 +1,961 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+:root{
+    --primary-font: 'DM Sans', sans-serif;
+    --primary-color: #262626;
+    --secondery-color: #767676;
+    --tertiary-color: #6D6D6D;
+    --rare-color: #C4C4C4;
+}
+
+html{
+    font-family: var(--primary-font);
+}
+
+h1{
+    font-size: 49px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2{
+    font-size: 39px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h4{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--primary-color);
+}
+
+h5{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h6{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    color: var(--primary-color);
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--tertiary-color);
+}
+
+i{
+    color: var(--primary-color);
+}
+
+.new button{
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background: var(--primary-color);
+    border: none;
+    padding: 9px 31px;
+}
+
+.pop-up{
+    height: 156px;
+    width: 370px;
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 214px;
+    position: absolute;
+    transition: all linear 0.8s;
+    display: none;
+}
+
+.pop-up .details{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15px;
+}
+
+.container{
+    max-width: 1604px;
+    margin: 0 auto;
+}
+
+/* *******************************************
+            common css end 
+******************************************* */
+
+/********************************************
+            nav css start
+********************************************/
+nav {
+    background-color: #fff;
+    padding: 31px 0;
+    width: 100%;
+    /* z-index: 999; */
+}
+
+/* nav label{
+    display: none;
+    font-size: 24px;
+}
+
+nav input{
+    display: none;
+} */
+
+.menu_wrapper {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 10%;
+}
+
+.menu{
+    width: 80%;
+}
+
+.language{
+    width: 10%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondery-color);
+    transition: all linear 0.3s;
+}
+
+.menu ul li a:hover{
+    color: var(--primary-color);
+}
+
+.language ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+}
+
+.language ul li a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondery-color);
+    transition: all linear 0.3s;
+}
+
+.language ul li a:hover{
+    color: var(--primary-color);
+}
+
+/********************************************
+            nav css end 
+********************************************/
+
+/********************************************
+            nav bottom css start 
+********************************************/
+#nav-bottom {
+    background-color: #F5F5F3;
+    padding: 25px 0;
+    width: 100%;
+    /* z-index: 999; */
+}
+
+.bottom-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-wrapper .category{
+    width: 20%;
+    color: var(--primary-color);
+    column-gap: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bottom-wrapper .category p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.bottom-wrapper .category input{
+    display: none;
+}
+
+.bottom-wrapper .searchbox{
+    width: 601px;
+    justify-content: center;
+    position: relative;
+}
+
+.bottom-wrapper .searchbox input{
+    width: 100%;
+    padding: 16px 55px 16px 21px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--rare-color);
+    background: #fff;
+}
+
+.bottom-wrapper .searchbox input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--rare-color);
+}
+
+.bottom-wrapper .searchbox i{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom-wrapper .icons{
+    width: 20%;
+    column-gap: 41px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bottom-wrapper .icons .user-icon{
+    width: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-wrapper .icons .cart-icon{
+    width: 17.5px;
+}
+/********************************************
+            nav bottom css end 
+********************************************/
+
+/********************************************
+            dropdown css start 
+********************************************/
+#dropdown{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.catagory-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.catagory-wrapper .catagory-box{
+    position: absolute;
+    width: 263px;
+    height: auto;
+    left: 0px;
+    top: -19px;
+    background-color: var(--primary-color);
+    /* display: none; */
+    /* For Catagory box */
+}
+
+.catagory-wrapper .catagory-box ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.catagory-wrapper .catagory-box ul li{
+    margin: 16px auto 16px 21px;
+    position: relative;
+}
+
+.catagory-wrapper .catagory-box ul li:after {
+    width: 261px;
+    height: 1px;
+    background: #2D2D2D;
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+.catagory-wrapper .catagory-box ul li:last-child:after{
+    width: 0;
+}
+
+.catagory-wrapper .catagory-box ul li a{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all linear 0.3s;
+}
+
+.catagory-wrapper .catagory-box ul li a:hover{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.bottom-wrapper .category input:checked ~ .catagory-wrapper .catagory-box{
+    display: flex;
+}
+
+/* .bottom-wrapper .category i input:checked ~ .catagory-box{
+    display: block;
+} */
+
+.catagory-wrapper .cart-popout{
+    width: 360px;
+    height: 241px;
+    position: absolute;
+    top: -27px;
+    right: 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* display: none; */
+}
+
+.catagory-wrapper .cart-popout .top{
+    width: 358px;
+    height: 120px;
+    background: #F5F5F3;
+    margin: 1px 1px 0 1px;
+    display: flex;
+}
+
+.catagory-wrapper .cart-popout .top img{
+    margin: 20px 20px 20px 20px;
+}
+
+.catagory-wrapper .cart-popout .top .info{
+    width: 130px;
+    height: 48px;
+    margin: 37px 78px 35px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.catagory-wrapper .cart-popout .top .info h6{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.catagory-wrapper .cart-popout .top .info p{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.catagory-wrapper .cart-popout .top i{
+    margin: 55px 20px 55px 0px;
+}
+
+.catagory-wrapper .cart-popout .bottom{
+    width: 360px;
+    height: 120px;
+}
+
+.catagory-wrapper .cart-popout .bottom .bottom-box{
+    margin: 14px 20px 20px 20px;
+}
+
+.catagory-wrapper .cart-popout .bottom .total{
+    width: 125px;
+    height: 23px;
+}
+
+.catagory-wrapper .cart-popout .bottom span{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.catagory-wrapper .cart-popout .bottom .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0 20px 0;
+}
+
+.catagory-wrapper .cart-popout .bottom .buttons a{
+    width: 148px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid #2B2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+
+.catagory-wrapper .cart-popout .bottom .buttons a:hover{
+    color: var(--primary-color);
+    background: #fff;
+}
+
+.catagory-wrapper .account ul{
+    position: absolute;
+    top: -27px;
+    right: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: none; */
+    /* For my account dropdown */
+}
+
+.catagory-wrapper .account ul a {
+    width: 200px;
+    height: 50px;
+    background-color: #2B2B2B;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.4s;
+}
+
+.catagory-wrapper .account ul a:hover{
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    color: var(--primary-color);
+}
+/********************************************
+            dropdown css end 
+********************************************/
+
+/********************************************
+            intro css start 
+********************************************/
+#intro{
+    margin-top: 124px;
+    height: 91px;
+}
+
+#intro .intro-wrapper p{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--secondery-color);
+    margin-top: 11px;
+}
+/********************************************
+            intro css end 
+********************************************/
+
+/********************************************
+            filter css start 
+********************************************/
+#filter{
+    margin-top: 130px;
+    width: 100%;
+    height: auto;
+}
+.filter-wrapper{
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-wrapper .filter-1{
+    width: 373px;
+    height: 1743px;
+}
+
+/********************************************
+            filter-1 css start 
+********************************************/
+
+.filter-wrapper .filter-1 .shop{
+    width: 372px;
+    height: 396px;
+    margin-bottom: 53px;
+}
+
+.filter-wrapper .filter-1 .shop h5{
+    margin-bottom: 35px;
+    margin-left: 2.5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-wrapper .filter-1 .shop p{
+    margin-bottom: 20px;
+    margin-left: 2.5px;
+    width: 370px;
+    height: 51px;
+    border-bottom: 2px solid #F0F0F0;
+    justify-content: space-between;
+}
+
+.filter-wrapper .filter-1 .category p{
+    display: flex;
+}
+
+.filter-wrapper .filter-1 .category p i{
+    width: 10px;
+    height: 10px;
+    color: var(--secondery-color);
+}
+
+.filter-wrapper .filter-1 .color p i{
+    height: 11px;
+    width: 11px;
+    margin-right: 10px;
+    margin-left: 3.5px;
+}
+
+.filter-wrapper .filter-1 .color .color-1 i{
+    color: #000;
+}
+.filter-wrapper .filter-1 .color .color-2 i{
+   color: #FF8686;
+}
+.filter-wrapper .filter-1 .color .color-3 i{
+   color: #7ED321;
+}
+.filter-wrapper .filter-1 .color .color-4 i{
+   color: #B6B6B6;
+}
+.filter-wrapper .filter-1 .color .color-5 i{
+   color: #15CBA5;
+}
+/********************************************
+            filter-1 css end 
+********************************************/
+
+/********************************************
+            filter-2 css start 
+********************************************/
+
+.filter-wrapper .filter-2{
+    width: 1190px;
+    /* height: 2010px; */
+}
+
+/********************************************
+            filter-2 top css start 
+********************************************/
+
+.filter-wrapper .filter-2 .top{
+    width: 1190px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter-wrapper .filter-2 .top .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+.filter-wrapper .filter-2 .top .icon{
+    width: 36px;
+    height: 36px;
+    background: #262626;
+    border: 1px solid #F0F0F0 transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all linear 0.4s;
+}
+
+.filter-wrapper .filter-2 .top .icon i{
+    color: #fff;
+    transition: all linear 0.4s;
+}
+
+.filter-wrapper .filter-2 .top .icon:hover{
+    background: #fff;
+    border: 1px solid #F0F0F0;
+}
+
+.filter-wrapper .filter-2 .top .icon:hover i{
+    color: #737373;
+}
+
+.filter-wrapper .filter-2 .top .box{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 40px;
+}
+
+.filter-wrapper .filter-2 .top .box button{
+    width: 239px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    padding: 3px 21px;
+    color: var(--secondery-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-wrapper .filter-2 .top .box button i{
+    color: #737373;
+}
+
+.filter-wrapper .filter-2 .top .box .sorting{
+    width: 310px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-wrapper .filter-2 .top .box .show{
+    width: 199px;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-wrapper .filter-2 .top .box .show button{
+    width: 139px;
+    margin-right: 1px;
+}
+/********************************************
+            filter-2 top css end 
+********************************************/
+
+/********************************************
+            filter-2 products css start 
+********************************************/
+.filter-wrapper .filter-2 .products{
+    width: 1190px;
+    height: 2010px;
+    margin-top: 58px;
+}
+
+.filter-wrapper .filter-2 .products .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    column-gap: 40px;
+    row-gap: 50px;
+    background: #fff;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item{
+    background: #fff;
+    height: 370px;
+    width: 370px;
+    margin-bottom: 95px;
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    /* position: relative; */
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:hover .pop-up{
+    display: flex;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-1{
+    background: url(../images/pounder.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-2{
+    background: url(../images/headset.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-3{
+    background: url(../images/round-table.png) top no-repeat red;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:nth-child(3) .new button{
+    background: transparent;
+    color: transparent;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-4{
+    background: url(../images/cap.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:nth-child(4) .new button{
+    background: transparent;
+    color: transparent;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-5{
+    background: url(../images/wall-clock.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-6{
+    background: url(../images/bag-2.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:nth-child(6) .new button{
+    background: transparent;
+    color: transparent;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-7{
+    background: url(../images/sunglass.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-8{
+    background: url(../images/flower-pot.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-9{
+    background: url(../images/rabbit.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-10{
+    background: url(../images/bucket.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:nth-child(10) .new button{
+    background: transparent;
+    color: transparent;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-11{
+    background: url(../images/basket.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:nth-child(11) .new button{
+    background: transparent;
+    color: transparent;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item-12{
+    background: url(../images/pounder.png) top no-repeat;
+    position: relative;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item:nth-child(12) .new button{
+    background: transparent;
+    color: transparent;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item .new{
+    margin: 20px 258px 315px 20px;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item .h5-title{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+
+.filter-wrapper .filter-2 .products .wrapper .item .h6-title{
+    margin-top: 15px;
+    line-height: 30px;
+}
+/********************************************
+            filter-2 products css end 
+********************************************/
+
+/********************************************
+            filter-2 pager css start 
+********************************************/
+
+.filter-wrapper .filter-2 .pager{
+    margin-top: 50px;
+    width: 100%;
+    height: 36px;
+    display: flex;
+    justify-content: space-between;
+}
+.filter-wrapper .filter-2 .pager .boxes{
+    height: 36px;
+    display: flex;
+    column-gap: 15px;
+}
+
+.filter-wrapper .filter-2 .pager .boxes .box{
+    width: 36px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.3s;
+}
+
+.filter-wrapper .filter-2 .pager .boxes .box:hover{
+    background: var(--primary-color);
+}
+
+.filter-wrapper .filter-2 .pager .boxes .box:hover p{
+    color: #fff;
+}
+
+.filter-wrapper .filter-2 .pager p{
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    color: var(--secondery-color);
+}
+
+.filter-wrapper .filter-2 .pager .boxes .dot p{
+    margin: auto 11px;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.filter-wrapper .filter-2 .pager .description{
+    width: 172px;
+}
+
+.filter-wrapper .filter-2 .pager .description p{
+    line-height: 30px;
+}
+
+/********************************************
+            filter-2 pager css end 
+********************************************/
+
+/********************************************
+            filter-2 css end 
+********************************************/
+
+/********************************************
+            footer section css start 
+********************************************/
+footer{
+    margin-top: 140px;
+    height: 374px;
+    background: #F5F5F3;
+}
+
+footer .footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 55px;
+}
+
+footer .footer-wrapper .top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+footer .footer-wrapper .top .left{
+    width: 71%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 256px;
+}
+
+footer .footer-wrapper .top .right{
+    width: 29%;
+}
+
+footer .footer-wrapper .top .left .item h6{
+    line-height: 23px;
+}
+
+footer .footer-wrapper .top .left .item ul{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--tertiary-color);
+}
+
+footer .footer-wrapper .top .left .item ul li{
+    margin: 6px 0;
+}
+
+footer .footer-wrapper .top .left h6{
+    line-height: 27px;
+    margin-bottom: 15px;
+}
+
+footer .footer-wrapper .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+footer .footer-wrapper .bottom .icons{
+    column-gap: 26px;
+    display: flex;
+}
+
+footer .footer-wrapper .bottom p{
+    font-size: 14px;
+    line-height: 23px;
+}
+/********************************************
+            footer section css end 
+********************************************/

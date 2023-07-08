@@ -1,0 +1,986 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+:root{
+    --primary-font: 'DM Sans', sans-serif;
+    --primary-color: #262626;
+    --secondery-color: #767676;
+    --tertiary-color: #6D6D6D;
+    --rare-color: #C4C4C4;
+}
+
+html{
+    font-family: var(--primary-font);
+}
+
+h1{
+    font-size: 49px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h2{
+    font-size: 39px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h3{
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h4{
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--primary-color);
+}
+
+h5{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+h6{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 23px;
+    color: var(--primary-color);
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--tertiary-color);
+}
+
+.normal{
+    line-height: normal;
+}
+
+i{
+    color: var(--primary-color);
+}
+
+.new button{
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    background: var(--primary-color);
+    border: none;
+    padding: 9px 31px;
+}
+
+.pop-up{
+    height: 156px;
+    width: 370px;
+    background: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex-direction: column;
+    margin-top: 214px;
+    position: absolute;
+    transition: all linear 0.8s;
+    display: none;
+}
+
+.pop-up .details{
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 15px;
+}
+
+.container{
+    max-width: 1604px;
+    margin: 0 auto;
+}
+
+/* *******************************************
+            common css end 
+******************************************* */
+
+/********************************************
+            nav css start
+********************************************/
+nav {
+    background-color: #fff;
+    padding: 31px 0;
+    width: 100%;
+    /* z-index: 999; */
+}
+
+/* nav label{
+    display: none;
+    font-size: 24px;
+}
+
+nav input{
+    display: none;
+} */
+
+.menu_wrapper {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 10%;
+}
+
+.menu{
+    width: 80%;
+}
+
+.language{
+    width: 10%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    margin: 0 20px;
+}
+
+.menu ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondery-color);
+    transition: all linear 0.3s;
+}
+
+.menu ul li a:hover{
+    color: var(--primary-color);
+}
+
+.language ul {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 20px;
+}
+
+.language ul li a {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--secondery-color);
+    transition: all linear 0.3s;
+}
+
+.language ul li a:hover{
+    color: var(--primary-color);
+}
+
+/********************************************
+            nav css end 
+********************************************/
+
+/********************************************
+            nav bottom css start 
+********************************************/
+#nav-bottom {
+    background-color: #F5F5F3;
+    padding: 25px 0;
+    width: 100%;
+    /* z-index: 999; */
+}
+
+.bottom-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-wrapper .category{
+    width: 20%;
+    color: var(--primary-color);
+    column-gap: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.bottom-wrapper .category p{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.bottom-wrapper .category input{
+    display: none;
+}
+
+.bottom-wrapper .searchbox{
+    width: 601px;
+    justify-content: center;
+    position: relative;
+}
+
+.bottom-wrapper .searchbox input{
+    width: 100%;
+    padding: 16px 55px 16px 21px;
+    box-sizing: border-box;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--rare-color);
+    background: #fff;
+}
+
+.bottom-wrapper .searchbox input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--rare-color);
+}
+
+.bottom-wrapper .searchbox i{
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.bottom-wrapper .icons{
+    width: 20%;
+    column-gap: 41px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.bottom-wrapper .icons .user-icon{
+    width: 33px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bottom-wrapper .icons .cart-icon{
+    width: 17.5px;
+}
+/********************************************
+            nav bottom css end 
+********************************************/
+
+/********************************************
+            dropdown css start 
+********************************************/
+#dropdown{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: none;
+}
+.catagory-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+.catagory-wrapper .catagory-box{
+    position: absolute;
+    width: 263px;
+    height: auto;
+    left: 0px;
+    top: -19px;
+    background-color: var(--primary-color);
+    /* display: none; */
+    /* For Catagory box */
+}
+
+.catagory-wrapper .catagory-box ul{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.catagory-wrapper .catagory-box ul li{
+    margin: 16px auto 16px 21px;
+    position: relative;
+}
+
+.catagory-wrapper .catagory-box ul li:after {
+    width: 261px;
+    height: 1px;
+    background: #2D2D2D;
+    content: "";
+    position: absolute;
+    top: 39px;
+    left: -20px;
+    transform: translateY(-50%);
+}
+
+.catagory-wrapper .catagory-box ul li:last-child:after{
+    width: 0;
+}
+
+.catagory-wrapper .catagory-box ul li a{
+    font-size: 14px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.7);
+    transition: all linear 0.3s;
+}
+
+.catagory-wrapper .catagory-box ul li a:hover{
+    color: #fff;
+    margin-left: 10px;
+}
+
+.bottom-wrapper .category input:checked ~ .catagory-wrapper .catagory-box{
+    display: flex;
+}
+
+/* .bottom-wrapper .category i input:checked ~ .catagory-box{
+    display: block;
+} */
+
+.catagory-wrapper .cart-popout{
+    width: 360px;
+    height: 241px;
+    position: absolute;
+    top: -27px;
+    right: 0;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* display: none; */
+}
+
+.catagory-wrapper .cart-popout .top{
+    width: 358px;
+    height: 120px;
+    background: #F5F5F3;
+    margin: 1px 1px 0 1px;
+    display: flex;
+}
+
+.catagory-wrapper .cart-popout .top img{
+    margin: 20px 20px 20px 20px;
+}
+
+.catagory-wrapper .cart-popout .top .info{
+    width: 130px;
+    height: 48px;
+    margin: 37px 78px 35px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.catagory-wrapper .cart-popout .top .info h6{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.catagory-wrapper .cart-popout .top .info p{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.catagory-wrapper .cart-popout .top i{
+    margin: 55px 20px 55px 0px;
+}
+
+.catagory-wrapper .cart-popout .bottom{
+    width: 360px;
+    height: 120px;
+}
+
+.catagory-wrapper .cart-popout .bottom .bottom-box{
+    margin: 14px 20px 20px 20px;
+}
+
+.catagory-wrapper .cart-popout .bottom .total{
+    width: 125px;
+    height: 23px;
+}
+
+.catagory-wrapper .cart-popout .bottom span{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--primary-color);
+}
+
+.catagory-wrapper .cart-popout .bottom .buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 13px 0 20px 0;
+}
+
+.catagory-wrapper .cart-popout .bottom .buttons a{
+    width: 148px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid #2B2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+
+.catagory-wrapper .cart-popout .bottom .buttons a:hover{
+    color: var(--primary-color);
+    background: #fff;
+}
+
+.catagory-wrapper .account ul{
+    position: absolute;
+    top: -27px;
+    right: 57px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* display: none; */
+    /* For my account dropdown */
+}
+
+.catagory-wrapper .account ul a {
+    width: 200px;
+    height: 50px;
+    background-color: #2B2B2B;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all linear 0.4s;
+}
+
+.catagory-wrapper .account ul a:hover{
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    color: var(--primary-color);
+}
+/********************************************
+            dropdown css end 
+********************************************/
+
+/********************************************
+            intro css start 
+********************************************/
+#intro{
+    width: 100%;
+}
+
+#intro .intro-wrapper p{
+    font-size: 12px;
+    line-height: normal;
+}
+/********************************************
+            intro css end 
+********************************************/
+
+/********************************************
+            images css start 
+********************************************/
+#images{
+    margin-top: 125px;
+    width: 100%;
+}
+
+#images .image-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 44px;
+    row-gap: 44px;
+}
+/********************************************
+            images css end 
+********************************************/
+
+/********************************************
+            images css end 
+********************************************/
+#product-information{
+    margin-top: 50px;
+    height: 781px;
+    width: 100%;
+}
+
+#product-information .information-wrapper{
+    width: 782px;
+    height: 781px;
+}
+
+#product-information .review{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+#product-information .stars i{
+    color: #FFD881;
+}
+
+#product-information .review p{
+    font-size: 14px;
+    color: var(--secondery-color);
+}
+
+#product-information .price{
+    padding: 21px 0 24px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 23px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+#product-information .colors-wrapper{
+    margin-top: 29px;
+    width: 280px;
+    height: 28px;
+    display: flex;
+    column-gap: 53px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+#product-information .colors-wrapper .colors{
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
+#product-information .colors-wrapper .colors .color{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    transition: all linear 0.3s;
+}
+
+#product-information .colors-wrapper .colors .color:hover{
+    width: 28px;
+    height: 28px;
+    opacity: 0.5;
+}
+
+#product-information .colors-wrapper .colors .color-1{
+    background: #000000;
+    opacity: 0.1973353773355484;
+}
+
+#product-information .colors-wrapper .colors .color-2{
+    background: #FF8686;
+    opacity: 0.1973353773355484;
+}
+#product-information .colors-wrapper .colors .color-3{
+    background: #7ED321;
+    opacity: 0.1973353773355484;
+}
+#product-information .colors-wrapper .colors .color-4{
+    background: #B6B6B6;
+    opacity: 0.1973353773355484;
+}
+#product-information .colors-wrapper .colors .color-5{
+    background: #15CBA5;
+    opacity: 0.1973353773355484;
+}
+/********************************************
+            images css end 
+********************************************/
+
+/********************************************
+            size css start 
+********************************************/
+
+#product-information .size{
+    margin-top: 30px;
+    column-gap: 76px;
+    display: flex;
+    align-items: center;
+}
+
+#product-information .size button{
+    width: 139px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    padding: 3px 21px;
+    color: var(--secondery-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#product-information .size button i{
+    color: #767676;
+}
+
+/********************************************
+            size css end 
+********************************************/
+
+/********************************************
+            quantity css start 
+********************************************/
+
+#product-information .quantity{
+    padding: 30px 0;
+    column-gap: 29px;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    align-items: center;
+}
+
+#product-information .quantity button{
+    width: 139px;
+    height: 36px;
+    background: #fff;
+    border: 1px solid #F0F0F0;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+    padding: 3px 21px;
+    color: var(--secondery-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/********************************************
+            size css end 
+********************************************/
+
+/********************************************
+            Status css end 
+********************************************/
+#product-information .status{
+    padding: 20px 0;
+    column-gap: 27px;
+    border-bottom: 1px solid #F0F0F0;
+    display: flex;
+    align-items: center;
+}
+/********************************************
+            size css end 
+********************************************/
+
+/********************************************
+            size css end 
+********************************************/
+#product-information .buttons{
+    display: flex;
+    column-gap: 20px;
+    padding: 30px 0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+#product-information .buttons a{
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid #2B2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+
+#product-information .buttons a:hover{
+    color: var(--primary-color);
+    background: #fff;
+}
+/********************************************
+            size css end 
+********************************************/
+
+/********************************************
+            Feature css start 
+********************************************/
+
+#product-information .feature{
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+/********************************************
+            Feature css end 
+********************************************/
+
+/********************************************
+            Shipping css start 
+********************************************/
+
+#product-information .shipping{
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+/********************************************
+            Shipping css end 
+********************************************/
+
+/********************************************
+            details css start 
+********************************************/
+
+#product-information .details{
+    margin-top: 20px;
+}
+
+/********************************************
+            details css end 
+********************************************/
+
+/********************************************
+            description css start 
+********************************************/
+
+#description{
+    margin-top: 123px;
+    height: 320px;
+    width: 100%;
+}
+
+#description .description-wrapper{
+    width: 100%;
+}
+
+#description .heading{
+    display: flex;
+    align-items: center;
+    column-gap: 62px;
+}
+
+#description .heading p{
+    font-size: 20px;
+    line-height: 29px;
+}
+
+#description .review-product p{
+    padding: 42px 0 16px 0;
+    font-size: 14px;
+    border-bottom: 2px solid #F0F0F0;
+}
+
+#description .ford{
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#description .ford .john{
+    display: flex;
+    align-items: center;
+    column-gap: 37px;
+}
+
+#description .ford .john p{
+    color: var(--primary-color);
+}
+
+#description .ford .john .stars i{
+    color: #FFD881;
+}
+
+#description .paragraph{
+    padding: 15px 0;
+    border-bottom: 2px solid #F0F0F0;
+}
+/********************************************
+            description css end 
+********************************************/
+
+/********************************************
+            review css start 
+********************************************/
+
+#review{
+    width: 100%;
+    height: 473px;
+}
+
+#review .review-wrapper{
+    width: 780px;
+    height: 473px;
+}
+
+#review .review-wrapper .input{
+    margin-top: 48px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 23px;
+}
+
+#review .review-wrapper .input .item{
+    height: 68px;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+#review .review-wrapper .input .item input{
+    margin-top: 3px;
+    width: 100%;
+    height: 18px;
+    padding: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondery-color);
+    background: #fff;
+}
+
+#review .review-wrapper .input .item input::placeholder{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--secondery-color);
+}
+
+#review .review-wrapper .input .item:last-child{
+    height: 132px;
+}
+
+#review .review-wrapper .input .item:last-child input{
+    height: 105px;
+    /* text-align: start; */
+}
+
+#review .review-wrapper .input .item:last-child input[type="text"]::placeholder {
+    text-align: start;
+    word-wrap: break-word;
+}
+
+#review .review-wrapper button{
+    margin-top: 29px;
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: normal;
+    color: #fff;
+    background: var(--primary-color);
+    border: 1px solid #2B2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all linear .3s;
+}
+
+#review .review-wrapper button:hover{
+    color: var(--primary-color);
+    background: #fff;
+}
+/********************************************
+            review css end 
+********************************************/
+
+/********************************************
+            footer section css start 
+********************************************/
+footer{
+    margin-top: 341px;
+    height: 374px;
+    background: #F5F5F3;
+}
+
+footer .footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 55px;
+}
+
+footer .footer-wrapper .top{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 55px;
+}
+
+footer .footer-wrapper .top .left{
+    width: 71%;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 256px;
+}
+
+footer .footer-wrapper .top .right{
+    width: 29%;
+}
+
+footer .footer-wrapper .top .left .item h6{
+    line-height: 23px;
+}
+
+footer .footer-wrapper .top .left .item ul{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 23px;
+    color: var(--tertiary-color);
+}
+
+footer .footer-wrapper .top .left .item ul li{
+    margin: 6px 0;
+}
+
+footer .footer-wrapper .top .left h6{
+    line-height: 27px;
+    margin-bottom: 15px;
+}
+
+footer .footer-wrapper .bottom{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 65px;
+}
+
+footer .footer-wrapper .bottom .icons{
+    column-gap: 26px;
+    display: flex;
+}
+
+footer .footer-wrapper .bottom p{
+    font-size: 14px;
+    line-height: 23px;
+}
+/********************************************
+            footer section css end 
+********************************************/
